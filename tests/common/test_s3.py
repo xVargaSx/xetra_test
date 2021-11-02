@@ -8,8 +8,8 @@ import unittest
 import boto3
 from moto import mock_s3
 import pandas as pd
-from xetra.common.custom_exceptions import WrongFormatException
 
+from xetra.common.custom_exceptions import WrongFormatException
 from xetra.common.s3 import S3BucketConnector
 
 class TestS3BucketConnectorMethods(unittest.TestCase):
