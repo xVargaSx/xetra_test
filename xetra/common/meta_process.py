@@ -70,7 +70,7 @@ class MetaProcess():
             # reading meta file
             df_meta = s3_bucket_meta.read_csv_to_df(meta_key)
             # creating a list of dates from first_date until today
-            dates = [(start_dt + timedelta(days=x)) for x in range(0, (today-start_dt).days + 1)]
+            dates = [(start_dt + timedelta(days=x)) for x in range(0, (today-start_dt).days )] #+ 1
             # creating a list of dates from min_date until today
             src_dates = set(pd.to_datetime(
                 df_meta[MetaProcessFormat.META_SOURCE_DATE_COL.value]).dt.date)
